@@ -7,6 +7,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+//Example:
+//app.get('/', function (req, res) {
+//    res.send('hello world')
+//  })
+
 routes.forEach(route => {
     app[route.method](route.path, route.handler);
 });
