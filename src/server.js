@@ -21,7 +21,10 @@ app.use(bodyParser.json());
 //  })
 
 routes.forEach(route => {
-    app[route.method](route.path, route.handler);
+    route.private? 
+    app[route.route.method](route.route.path, protectRoute, route.route.handler)
+    : app[route.route.method](route.route.path, route.route.handler);
+
 });
 
 const start = async () => {
