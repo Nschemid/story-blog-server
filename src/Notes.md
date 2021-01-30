@@ -54,4 +54,7 @@ export const protectRoute = async (req, res, next) => {
 ```
 
 ### Add the middleware on server.js
+'Next' call back before the handler function
+Verify the user token before calling the handler function
 
+ req.user allows the handler have access to that!
