@@ -1,7 +1,9 @@
 import { helloRoute } from './helloRoute';
 import {getAllStoriesRoute}  from './getAllStoriesRoute'
 
-export const routes = [
+export {protectRoute} from './protectRoute'
+
+export const routes = [ 
     helloRoute,
     getAllStoriesRoute
 ];
